@@ -53,6 +53,9 @@ body {
 	font-weight: bold;
 	font-size: 40px;
 	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .view-front {
 	background: crimson;
