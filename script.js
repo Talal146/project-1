@@ -1,8 +1,15 @@
+let flippedCard = [];
 function cardClick() {
 	const cards = document.querySelectorAll('.card');
+	let firstCard, secondCard;
+
+  
 	[...cards].forEach((card) => {
 		card.addEventListener('click', function () {
-			card.classList.toggle('is-flipped');
+			if (flippedCard.length < 2 && !card.classList.contains('is-flipped')) {
+				flippedCard.push(card);
+				card.classList.toggle('is-flipped');
+			}
 		});
 	});
 }
