@@ -1,11 +1,11 @@
 # project-1
-# **_Wrod gussing_**
+# **_Word guessing_**
 
 ## Date: \*_1/5/2024_
 
 ### \*_By Talal Abdulla_
 
-**_[Website](http://www.duckduckgo.com)_** | **_[Facebook](http://www.facbook.com)_** | **_[Linkedin](http://www.linkedin.com)_**
+
 
 ### **_discription_**
 
