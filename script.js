@@ -12,12 +12,6 @@ function cardClick() {
 		});
 	});
 }
-/*
-function shuffleCards(cardsArray) {
-	return cardsArray.sort(() => Math.random() - 0.5);
-}*/
-
-
 function shuffleCards(cardsArray) {
 	let shuffledArray = [];
 	while (cardsArray.length > 0) {
@@ -32,14 +26,18 @@ function reset() {
 	flippedCard = [];
 	[...cards].forEach((card, index) => {
 		card.classList.remove('is-flipped');
-		let shuffledCards = shuffleCards(Array.from(cards));
-		let cardsContainer = document.getElementById('cards-container');
-		cardsContainer.innerHTML = '';
-		console.log(shuffledCards);
-		shuffledCards.forEach((card) => {
-			cardsContainer.appendChild(card);
-		});
+		handleCardsShuffle();
 	});
 }
-window.addEventListener('load', cardClick);
+function handleCardsShuffle() {
+	const cards = document.querySelectorAll('.card');
+	let shuffledCards = shuffleCards(Array.from(cards));
+	let cardsContainer = document.getElementById('cards-container');
+	cardsContainer.innerHTML = '';
+	shuffledCards.forEach((card) => {
+		cardsContainer.appendChild(card);
+	});
+}
 
+window.addEventListener('load', cardClick);
+document.addEventListener('DOMContentLoaded', handleCardsShuffle);
