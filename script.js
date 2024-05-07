@@ -1,22 +1,26 @@
-let flippedCard = []
+let flippedCard = [];
 function cardClick() {
-  const cards = document.querySelectorAll('.card')
-  let firstCard, secondCard
-  ;[...cards].forEach((card) => {
-    card.addEventListener('click', function () {
-      if (flippedCard.length < 2 && !card.classList.contains('is-flipped')) {
-        flippedCard.push(card)
-        card.classList.toggle('is-flipped')
-      }
-    })
-  })
+	const cards = document.querySelectorAll('.card');
+	let firstCard, secondCard;
+	[...cards].forEach((card) => {
+		card.addEventListener('click', function () {
+			if (flippedCard.length < 2 && !card.classList.contains('is-flipped')) {
+				flippedCard.push(card);
+				card.classList.toggle('is-flipped');
+			}
+		});
+	});
 }
-let cardShuffled = () => {}
-window.addEventListener('load', cardClick)
+let cardShuffled = () => {};
+window.addEventListener('load', cardClick);
 
 function shuffleCards(cardsArray) {
-  return cardsArray.sort(() => Math.random() - 0.5)
+	return cardsArray.sort(() => Math.random() - 0.5);
 }
-document.getElementById('reset').onclick = function () {
-  document.getElementById('numbers').innerHTML = ''
+function reset() {
+	const cards = document.querySelectorAll('.card');
+	flippedCard = [];
+	[...cards].forEach((card) => {
+		card.classList.remove('is-flipped');
+	});
 }
