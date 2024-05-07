@@ -9,7 +9,10 @@ body {
 
   overflow: auto;
   display: flex;
+  flex-direction: column;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
 
   background: linear-gradient(
     315deg,
@@ -21,9 +24,6 @@ body {
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   background-attachment: fixed;
-
-  justify-content: center;
-  align-items: center;
 }
 
 .board {
@@ -164,4 +164,18 @@ input {
   top: 90%;
   bottom: 10%;
   position: absolute;
+}
+h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  text-align: center;
+  margin: 0;
+  padding: 15px 20px;
+}
+
+.head {
+  text-align: center;
+  margin: 15px 300px 15px 300px;
+  padding: 20px 200px;
 }
